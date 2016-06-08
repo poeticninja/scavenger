@@ -3,6 +3,8 @@ import good from "good";
 import inert from "inert";
 import base from "./base";
 import dev from "./dev";
+import db from "./db";
+import model from "./model";
 
 const env = process.env.NODE_ENV || 'development'
 
@@ -48,6 +50,12 @@ server.register([
   },
   {
     register: inert
+  },
+  {
+    register: db
+  },
+  {
+    register: model
   },
   {
     register: base
